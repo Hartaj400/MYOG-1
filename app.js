@@ -31,7 +31,7 @@ function validateGuess(guess){
         //Keep record of number of attempted guesses
         previousGuesses.push(guess);
         //Check to see if game is over
-        if (numGuesses === 11){
+        if (numGuesses === 12){
             displayGuesses(guess);
             displayMessage(`Game Over! Number was ${randomNumber}`);
             endGame();
@@ -89,7 +89,7 @@ function newGame(){
         numGuesses = 1;
         guessSlot.innerHTML = '';
         lowOrHi.innerHTML = '';
-        remaining.innerHTML = `${11 - numGuesses}  `;
+        remaining.innerHTML = `${12- numGuesses}  `;
         userInput.removeAttribute('disabled');
         startOver.removeChild(p);
         playGame = true;
